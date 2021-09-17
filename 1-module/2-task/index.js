@@ -8,11 +8,22 @@ function print(text) {
 /**
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
+ * @param {string | null} name
+ * @returns {boolean}
  */
 function isValid(name) {
-  // ваш код...
+
+  if (name === String && name.length > 4) {
+    return 'true';
+
+  } else if (name === null)
+    return 'false';
+  
 }
 
+/**
+ * Эту функцию трогать не нужно
+ */
 function sayHello() {
   let userName = prompt('Введите ваше имя');
 
@@ -22,3 +33,5 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
+sayHello();
